@@ -6,14 +6,17 @@
 <?php get_header(); ?>
 
 	<article>
-
+        <h1>Helping You Better Understand Heart Health</h1>
 		<?php // Display all articles  on the Articles page
 		$temp = $wp_query; $wp_query= null;
-		$wp_query = new WP_Query(); $wp_query->query('showposts=6' . '&paged='.$paged);
+		$wp_query = new WP_Query(); $wp_query->query('showposts=7' . '&paged='.$paged);
 		while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-		<h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+		<div class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+        <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
 		<?php the_excerpt(); ?>
+        <p><a href="<?php the_permalink(); ?>">Read More</a></p>
+        
 
 		<?php endwhile; ?>
 
