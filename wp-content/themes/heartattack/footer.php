@@ -48,13 +48,14 @@
 					do_action( 'twentysixteen_credits' );
 				?>
 				<p class="disclaimer">
-                    Disclaimer: All material in this publication is provided for information only and may not be construed as medical advice or instruction. No action or inaction should be taken based solely on the contents of this publication; instead, readers should consult appropriate health professionals on any matter relating to their health and well-being. The information and opinions provided in this publication are believed to be accurate and sound, based on the best judgment available to the authors, but readers who fail to consult with appropriate health authorities assume the risk of any injuries. The publisher is not responsible for errors or omissions. The material in this publication has not been approved by the Food & Drug Administration.
+                    Disclaimer: All material in this publication is provided for information only and may not be construed as medical advice or instruction. No action or inaction should be taken based solely on the contents of this publication; instead, readers should consult appropriate health professionals on any matter relating to their health and well-being. The information and opinions provided in this publication are believed to be accurate and sound, based on the best judgment available to the authors, but readers who fail to consult with appropriate health authorities assume the risk of any injuries. The publisher is not responsible for errors or omissions. The material in this publication has not been approved by the Food & Drug Administration. This content may not be republished for commercial or non-commercial purposes without written permission.
                     </p>
                     <p class="copyright">
                         &copy; <script>document.write(new Date().getFullYear());</script> The Institute for Natural Healing, All Right Reserved
-                    </p>
-                    <p class="terms">
+                    <br>
+                    <span class="terms">
                         <a href="http://www.institutefornaturalhealing.com/terms-and-conditions/" target="_blank">Terms & Conditions</a>
+                    </span>
                     </p>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->

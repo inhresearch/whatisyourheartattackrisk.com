@@ -293,7 +293,8 @@ input,
 select,
 textarea {
 	color: #1a1a1a;
-	font-family: Merriweather, Georgia, serif;
+	/*font-family: Merriweather, Georgia, serif;*/
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.75;
@@ -451,7 +452,6 @@ html {
 }
 
 body {
-	background: #1a1a1a;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -765,6 +765,19 @@ a:active {
 /**
  * 6.2 - Menus
  */
+ 
+ .site-header-main {/*new*/
+   z-index: 2;
+   float: none;
+   position: fixed;
+   background: #fff;
+   width: 90%;
+   top: 0;
+ }
+ 
+ .site-content {/*new*/
+    margin-top: 45%;
+ }
 
 .site-header-menu {
 	display: none;
@@ -773,6 +786,7 @@ a:active {
 	flex: 0 1 100%;
 	margin: 0.875em 0;
 }
+
 
 .site-header-menu.toggled-on,
 .no-js .site-header-menu {
@@ -881,7 +895,7 @@ a:active {
 }
 
 .site-header .main-navigation + .social-navigation {
-	margin-top: 1.75em;
+	/*margin-top: 1.75em;*/
 }
 
 .site-footer .social-navigation {
@@ -1537,7 +1551,7 @@ blockquote:after,
  */
 
 .site-header {
-	padding: 2.625em 7.6923%;
+	/*padding: 2.625em 7.6923%;*/
 }
 
 .site-header-main {
@@ -1635,6 +1649,11 @@ blockquote:after,
 	opacity: 0.85;
 }
 
+    div .newsletter { /*new*/
+        background: #f2f2f2;
+        padding: 2%;
+    }
+
 
 /**
  * 11.2 - Posts and pages
@@ -1653,6 +1672,19 @@ blockquote:after,
 	margin-right: 7.6923%;
 	margin-left: 7.6923%;
 }
+
+.home .entry-header { /*New*/
+    background: url("http://localhost/whatisyourheartattackrisk.com/public_html/wp-content/uploads/2016/03/ekg-line-300x80.png") no-repeat left top;
+    height: 70px;
+}
+.entry-header, h2.secondHeadline { /*new*/
+   text-align: center; 
+}
+
+.entry-content ul li{ /*new*/
+   margin-left: 5%;
+}
+
 
 .entry-title {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
@@ -1984,6 +2016,39 @@ body:not(.search-results) .entry-summary > :last-child,
 	margin-bottom: 0.5384615385em;
 	text-transform: uppercase;
 }
+
+/* Articles Preview Page New*/ 
+.articleBlock {
+    border: 1px solid #e6e6e6;
+    /*padding: 1px 10px;
+    margin: 2px 2px;*;
+}
+
+.articleBlock .thumbnail { /*New*/
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.articleBlock h2 { /*New*/
+    font-size: 125%;
+    margin-bottom: 10%;
+    line-height: 1.5;
+    padding: 2%;
+}
+
+.articleBlock div, p { /*New*/
+    line-height: 1.5;
+}
+
+.articleBlock p { /*New*/
+    padding: 2%;
+}
+
+article h1 { /*New*/
+    text-align: center;
+}
+
 
 /**
  * IE8 and earlier will drop any block with CSS3 selectors.
@@ -2397,6 +2462,17 @@ body.search-no-results .page-header {
 	padding: 0 0.307692308em 0 0.538461538em;
 }
 
+.disclaimer { /*new*/
+border-top: 1px solid #e6e6e6;
+border-bottom: 1px solid #e6e6e6;
+padding: 4%;
+text-align: center;
+}
+
+.copyright { /*new*/
+text-align: center;
+}
+
 
 /**
  * 12.0 - Media
@@ -2685,6 +2761,24 @@ p > video {
 }
 
 
+/** New
+* <= 710px
+*/
+@media screen and (min-width: 22em) and (max-width: 25em) {
+      .site-content {/*new*/
+          margin-top: 35%;
+    } 
+}
+
+/** New
+* <= 710px
+*/
+@media screen and (min-width: 35em) and (max-width: 44.375em) {
+      .site-content {/*new*/
+          margin-top: 15%;
+    } 
+}
+
 /**
  * 14.1 - >= 710px
  */
@@ -2723,7 +2817,9 @@ p > video {
 	}
 
 	.site-header {
-		padding: 3.9375em 7.6923%;
+		/*padding: 3.9375em 7.6923%;*/
+        padding-bottom: 3em;
+
 	}
 
 	.site-branding {
@@ -2759,6 +2855,23 @@ p > video {
 	.header-image {
 		margin: 1.3125em 0;
 	}
+    
+   .site-content {/*new*/
+    margin-top: 5%;
+    }
+
+    div .jotform-form { /*new*/
+        width: 60%;
+        float: left;
+    }
+
+    div .newsletter { /*new*/
+        width: 40%;
+        float: right;
+        background: #f2f2f2;
+        padding: 2%;
+    }
+
 
 	.pagination {
 		margin: 0 23.0769% 4.421052632em 7.6923%
@@ -2896,6 +3009,15 @@ p > video {
 	body:not(.search-results) .entry-summary blockquote > ol {
 		margin-left: 1.473684211em;
 	}
+    
+    /* Articles Preview Page New*/ 
+    .articleBlock {
+      margin-right: 2%;
+      margin-bottom: 1%;
+      max-width: 45%;
+      height: 700px;
+      float: left;
+   }
 }
 
 
@@ -2924,6 +3046,7 @@ p > video {
 		-webkit-align-items: flex-start;
 		-ms-flex-align: start;
 		align-items: flex-start;
+        border-bottom: 1px solid rgba(0,0,0,0.13); /*new*/
 	}
 
 	.site-header-menu {
@@ -2932,6 +3055,10 @@ p > video {
 		-ms-flex: 0 1 auto;
 		flex: 0 1 auto;
 	}
+    
+    .site-content {/*new*/
+    margin-top: 15%;
+ }
 
 	.main-navigation {
 		margin: 0 -0.875em;
@@ -3057,9 +3184,24 @@ p > video {
 	}
 
 	.content-area {
-		float: left;
+		/*float: left;
 		margin-right: -100%;
-		width: 70%;
+		width: 70%;*/
+        margin: 0 auto; /*new*/
+        width: 86%; /*new*/
+        padding-right: 2%;
+       /* border-right: 1px solid #e6e6e6;*/
+	}
+    
+    .single-post .content-area {
+		/*float: left;
+		margin-right: -100%;
+		width: 70%;*/
+        /*margin: 0 auto; /*new*/
+        width: 76%; /*new*/
+        padding-right: 2%;
+        margin: 0;
+        border-right: 1px solid #e6e6e6;
 	}
 
 	.entry-header,
@@ -3079,10 +3221,12 @@ p > video {
 	}
 
 	.sidebar {
-		float: left;
-		margin-left: 75%;
+		float: right;
+		margin-left: 69%;
 		padding: 0;
 		width: 25%;
+        position: absolute;
+        top: 2%;
 	}
 
 	.widget {
@@ -3333,6 +3477,13 @@ p > video {
 		padding-right: 15%;
 		padding-left: 15%;
 	}
+    
+    /* Articles Preview Page New*/ 
+    .articleBlock {
+      max-width: 30%;
+      height: 700px;
+      float: left;
+   }
 }
 
 
@@ -3346,8 +3497,12 @@ p > video {
 	}
 
 	.site-header {
-		padding: 5.25em 4.5455%;
+		/*padding: 5.25em 4.5455%;*/
 	}
+    
+   .site-content {/*new*/
+    margin-top: 7%;
+ }
 
 	.site-branding,
 	.site-header-menu,
@@ -3481,7 +3636,7 @@ p > video {
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content {
-		float: right;
+		/*float: right;* new/
 		width: 71.42857144%;
 	}
 

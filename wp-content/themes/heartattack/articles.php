@@ -11,11 +11,13 @@
 		$temp = $wp_query; $wp_query= null;
 		$wp_query = new WP_Query(); $wp_query->query('showposts=7' . '&paged='.$paged);
 		while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
-		<div class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
-        <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
-		<?php the_excerpt(); ?>
-        <p><a href="<?php the_permalink(); ?>">Read More</a></p>
+        
+        <div class="articleBlock">
+            <div class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div>
+            <h2><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h2>
+            <?php the_excerpt(); ?>
+            <p><a href="<?php the_permalink(); ?>">Read More</a></p>
+        </div>
         
 
 		<?php endwhile; ?>
